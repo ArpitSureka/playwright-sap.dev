@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 # SAP Config
@@ -10,7 +10,6 @@ Under the hood it calls `SAPLogin` before the first test in a worker starts.
 :::tip Why use SAP Config?
 • Stop repeating the same login boilerplate in every test.  
 • Keep credentials in a single place (CI secrets).  
-• Works for both REPL (*npx playwright codegen*) and test runner.
 :::
 
 ```ts title="playwright.config.ts"
@@ -26,5 +25,5 @@ export default defineConfig({
 ```
 
 :::info Compatibility
-Currently works only with **Fiori Launchpad** and **NetWeaver** classic login pages.
+Currently works only with **Fiori Launchpad** and **NetWeaver** login pages.
 :::

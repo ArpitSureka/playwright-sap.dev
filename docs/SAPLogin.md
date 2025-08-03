@@ -16,19 +16,19 @@ page.SAPLogin(username: string,
 
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
-| `username` | string | ✔ | Your SAP user ID. |
+| `username` | string | ✔ | SAP user ID. |
 | `password` | string | ✔ | User password. |
 | `url` | string | ✖ | If provided, the browser first navigates to the URL; otherwise it assumes that the login page is already open. |
 
 :::info Compatibility
-Currently works only with **Fiori Launchpad** and **NetWeaver** classic login pages.
+Currently works only with **Fiori Launchpad** and **NetWeaver** login pages.
 :::
 
 ## Example
 
 ```ts
 // Login and stay on the Launchpad
-await page.SAPLogin(process.env.SAP_USER!, process.env.SAP_PASS!, 'https://sap.example.com');
+await page.SAPLogin(SAP_USER, SAP_PASS, 'https://sap.example.com');
 ```
 
 
