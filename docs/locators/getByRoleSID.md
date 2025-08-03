@@ -2,25 +2,33 @@
 sidebar_position: 3
 ---
 
-# GetByRoleSID
+# getByRoleSID
 
-Using locateSID locator is a little difficult as it is hard to read that why we created getByRoleSID locator. this locator internally uses locateSID locator. it converts sid to role locator whenver sid is of the format `wnd[<number>]/usr/` this uses the prefix mapping given below to convert to this format.
+Using `locateSID` locator is a little difficult as it is hard to read that why we created getByRoleSID locator. this locator internally uses locateSID locator. This makes reading and debugging the code easier.
 
-### Examples
+Note : This can only be used when sid is of the format `wnd[<x>]/usr/`.
+
+### Example
 
 ```tsx
-  await page.getByRoleSID('label', { name: 'FEEDBACK' }).click();
+await page.getByRoleSID('label', { name: 'FEEDBACK' }).click();
 ```
 
-### Arguments 
+### Signature
 
-- role: string - Required.
-- options:
-  -  name?: string;
-  -  pos?: number;
-  -  wnd?: number; - Default 0
+```ts
+page.getByRoleSID(role: string,
+                  options?: {
+                     name?: string;
+                     pos?:  number;
+                     wnd?:  number; // window index, default 0
+                  }): Locator
+```
 
-### Examples of conversion
+
+### How conversion works
+
+This converts sid to role locator whenver sid is of the format `wnd[<x>]/usr/` this uses the prefix mapping given below to convert to this format.
 
 ```tsx
 sid = wnd[0]/usr/okcd
@@ -37,7 +45,7 @@ sid = wnd[1]/usr/txtCONTACT[0]
 locator = getByRoleSID('text', { name: 'CONTACT', pos: 0, wnd: 1 })
 ```
 
-### SID Suffix Mapping
+### SID Role Mapping
 
 | SID Suffix | role |
 | -------- | -------- |

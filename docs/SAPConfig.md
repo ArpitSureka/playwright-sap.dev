@@ -4,18 +4,16 @@ sidebar_position: 6
 
 # SAP Config
 
-This configuration setting automatically goes to the url and logs in while using codegen and testing. This config setting internally uses SAPLogin function.
+Optional block that you can add to `playwright.config.ts` to **automatically perform SAP login** during every test run.  
+Under the hood it calls `SAPLogin` before the first test in a worker starts.
 
-:::info
-
-Currently works only with Fiori Lauchpad and Netweaver Login Page.
-
+:::tip Why use SAP Config?
+• Stop repeating the same login boilerplate in every test.  
+• Keep credentials in a single place (CI secrets).  
+• Works for both REPL (*npx playwright codegen*) and test runner.
 :::
 
-<br></br>
-<br></br>
-
-```tsx title="playwright.config.ts"
+```ts title="playwright.config.ts"
 export default defineConfig({
     // Other playwright configration.
     sapConfig: {
@@ -26,3 +24,7 @@ export default defineConfig({
   // Other playwright configration.
 });
 ```
+
+:::info Compatibility
+Currently works only with **Fiori Launchpad** and **NetWeaver** classic login pages.
+:::

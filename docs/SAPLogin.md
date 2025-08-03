@@ -4,19 +4,31 @@ sidebar_position: 5
 
 # SAP Login
 
-Easyily login to SAP Page.
+Utility that performs the complete **login flow** (username, password, optional URL navigation) for both **SAP Fiori Launchpad** and **SAP NetWeaver login** pages.
 
-:::info
+## Signature
 
-Currently works only with Fiori Lauchpad and Netweaver Login Page.
+```ts
+page.SAPLogin(username: string,
+              password: string,
+              url?: string): Promise<void>
+```
 
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `username` | string | ✔ | Your SAP user ID. |
+| `password` | string | ✔ | User password. |
+| `url` | string | ✖ | If provided, the browser first navigates to the URL; otherwise it assumes that the login page is already open. |
+
+:::info Compatibility
+Currently works only with **Fiori Launchpad** and **NetWeaver** classic login pages.
 :::
 
-<br></br>
-<br></br>
+## Example
 
-```tsx
-await page.SAPLogin('username', 'password', 'url');
+```ts
+// Login and stay on the Launchpad
+await page.SAPLogin(process.env.SAP_USER!, process.env.SAP_PASS!, 'https://sap.example.com');
 ```
 
 
