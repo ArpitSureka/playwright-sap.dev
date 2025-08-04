@@ -12,6 +12,10 @@ SID is the identifier you see in lsdata attribute of html element, for example:
 wnd[0]/usr/txtS_BUKRS-LOW
 ```
 
+:::note
+Here sid does not refer to System ID. sid refers to the string that comes in lsdata attribute in WebGUI HTML DOM. 
+:::
+
 ## Signature
 
 ```ts
@@ -27,6 +31,23 @@ await page.locateSID('wnd[0]/tbar[1]/btn[8]').click();
 ```ts title="Fill company code field"
 await page.locateSID('wnd[0]/usr/txtS_BUKRS-LOW').fill('1000');
 ```
+
+## How this works
+
+
+![Example locateSID](../../static/img/locateSID_1.jpg)
+
+Example taken from SE16 T-code.
+
+Blue Highlighted HTML section is for Table Name Input field. That HTML element has an attribute lsdata which contains sid equals `wnd[0]/usr/ctxtDATABROWSE-TABLENAME`
+
+```ts title="Fill 'but000' Table Name field"
+await page.locateSID('wnd[0]/usr/ctxtDATABROWSE-TABLENAME').fill('but000');
+
+// This will also work. Read getByRoleSID to understand how.
+await page.getByRoleSID('textField', { name: 'DATABROWSE-TABLENAME' }).fill('but000');
+```
+
 
 ## See also
 

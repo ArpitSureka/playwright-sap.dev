@@ -4,14 +4,14 @@ sidebar_position: 1
 
 # getByRoleUI5
 
-Locate SAP UI5 elements via their UI5 DOM and properties 
+Locate UI5 elements via their UI5 DOM and properties 
 
 ### Signature
 
 ```ts
 page.getByRoleUI5(role: string,      // Mandatory control type e.g. 'Button'
-                  props?: object,    // Control property map e.g. { text: 'Save' }
-                  options?: {        // Playwright locator options
+                  props?: object,    // property map e.g. { text: 'Save' }
+                  options?: {        
                     exact?: boolean  // Default false – use fuzzy match
                   }): Locator
 ```
@@ -21,7 +21,7 @@ Parameter details:
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
 | `role` | string | ✔ | SAP UI5 control type exactly as exposed by the framework (case-insensitive) e.g. `Button`, `Label`, `Dialog`. |
-| `props` | object |  | A map of **control properties** to match. Every key/value pair must match exactly. Example: `{ text: 'Samples' }` |
+| `properties` | object |  | A map of **control properties** to match. Every key/value pair must match exactly. Example: `{ text: 'Samples' }`. Currently supports only one property (support for multiple properties comming soon.)  |
 | `options.exact` | boolean |  | If `true`, properties are matched **case-sensitively** and without partial matches. Defaults to `false` (case-insensitive contains). |
 
 ### Examples
@@ -37,7 +37,7 @@ await page.getByRoleUI5('Dialog', { title: 'Confirmation' }).press('Enter');
 
 
 
-## How to use getByRoleUI5
+## How this works
 
 :::tip
 Install UI5 inspector to see UI5 DOM structure and control properties.
@@ -57,4 +57,7 @@ await page.getByRoleUI5('IconTabFilter', { icon: 'sap-icon://learning-assistant'
 await page.getByRoleUI5('IconTabFilter', { text: 'Documentation' }).click();
 
 await page.getByRoleUI5('IconTabFilter', { key: 'topic' }).click();
+
+// IconTabFilter is 2nd in UI5 DOM. playwright follows zero-based indexing
+await page.getByRoleUI5('IconTabFilter').nth(1).click();
 ```

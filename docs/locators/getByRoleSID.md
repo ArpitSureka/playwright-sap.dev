@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # getByRoleSID
 
-Using `locateSID` locator is a little difficult as it is hard to read that why we created getByRoleSID locator. this locator internally uses locateSID locator. This makes reading and debugging the code easier.
+Using `locateSID` locator is a little difficult as it is hard to read that why we created `getByRoleSID` locator. this locator internally uses locateSID locator. This makes reading and debugging the code easier.
 
 Note : This can only be used when sid is of the format `wnd[<x>]/usr/`.
 
@@ -26,7 +26,7 @@ page.getByRoleSID(role: string,
 ```
 
 
-### How conversion works
+## How this works
 
 This converts sid to role locator whenver sid is of the format `wnd[<x>]/usr/` this uses the prefix mapping given below to convert to this format.
 
