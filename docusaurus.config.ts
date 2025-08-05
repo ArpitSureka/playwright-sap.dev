@@ -14,7 +14,7 @@ const config: Config = {
   url: 'https://github.com',
   baseUrl: '/playwright-sap/',
   organizationName: 'ArpitSureka',
-  projectName: 'Playwright-SAP',
+  projectName: 'playwright-sap',
   deploymentBranch: 'gh-pages',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -51,7 +51,7 @@ const config: Config = {
       title: 'Playwright SAP',
       items: [
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://www.npmjs.com/package/playwright-sap',
           label: 'NPM',
           position: 'right',
         },
