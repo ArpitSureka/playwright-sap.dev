@@ -13,6 +13,7 @@ Mapping of Playwright-SAP Version and Playwright Version
 
 ## Upcoming Features
 
+- [ ] No text locators during text assertions. UI5 issue.
 - [ ] Multiple properties key/value pair for getByRoleUI5 locator.
 - [ ] UI5Xpath Locator. Construct xpaths using ui5 dom and use them as attribute.
 - [ ] Improving getByRoleSID for sid like `wnd[0]/tbar/btn[2]`

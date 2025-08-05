@@ -39,7 +39,7 @@ await page.locateSID('wnd[0]/usr/txtS_BUKRS-LOW').fill('1000');
 
 Example taken from SE16 T-code.
 
-Blue Highlighted HTML section is for Table Name Input field. That HTML element has an attribute lsdata which contains sid equals `wnd[0]/usr/ctxtDATABROWSE-TABLENAME`
+Blue Highlighted HTML section is for Table Name Input field. That HTML element has an attribute lsdata which contains sid equals `wnd[0]/usr/ctxtDATABROWSE-TABLENAME`. This image example is a very basic one and the orignal playwright also gives correct code for this but it often gives unstable locators based on changing IDs for more complex elements.
 
 ```ts title="Fill 'but000' Table Name field"
 await page.locateSID('wnd[0]/usr/ctxtDATABROWSE-TABLENAME').fill('but000');
