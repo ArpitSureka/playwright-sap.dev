@@ -5,7 +5,7 @@ slug: /
 
 # Introduction
 
-**Playwright-SAP** is built on top of Microsoft Playwright and focuses on **reliable automation of SAP Fiori, SAP WebGUI and UI5 applications**. Playwright is a very good testing and automation framework for web applications.
+**Playwright-SAP** is built on top of Microsoft Playwright and focuses on **reliable automation of SAP Fiori, SAP WebGUI and UI5 applications**.
 
 ### Why does it exist?
 

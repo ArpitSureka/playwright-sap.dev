@@ -1,80 +1,39 @@
-name: Bug Report 🪲
-description: Create a bug report to help us improve
-title: '[Bug]: '
+name: "🐛 Bug Report"
+description: "Report a reproducible bug"
+labels: [bug]
 body:
   - type: markdown
     attributes:
       value: |
-        Playwright-SAP is a new project so there may be some issues. sorry about that!. Thank you for helping us improve it!
-  - type: markdown
-    attributes:
-      value: |
-        > [!IMPORTANT]
-        > Bug reports without a minimal reproduction will be rejected.
-
-        ---
+        Thanks for reporting a bug! Please complete the form below.
   - type: input
-    id: version
+    id: title
     attributes:
-      label: Version
-      description: |
-        The version of Playwright-SAP you are using.
-        Is it the latest? Test and see if the bug has already been fixed.
-      placeholder: ex. 1.41.1
+      label: "Bug Title"
+      placeholder: "Brief summary of the issue"
     validations:
       required: true
   - type: textarea
-    id: reproduction
+    id: steps
     attributes:
-      label: Steps to reproduce
-      description: Please link to a repository with a minimal reproduction and describe accurately how we can reproduce/verify the bug.
-      placeholder: |
-        Example steps (replace with your own):
-        1. Clone my repo at https://github.com/<myuser>/example
-        2. npm install
-        3. npm run test
-        4. You should see the error come up
+      label: "Steps to Reproduce"
+      description: "Provide a list of steps to reproduce the bug"
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: Expected behavior
-      description: A description of what you expect to happen.
-      placeholder: I expect to see X or Y
-    validations:
-      required: true
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: Actual behavior
-      description: |
-        A clear and concise description of the unexpected behavior.
-        Please include any relevant output here, especially any error messages.
-      placeholder: A bug happened!
-    validations:
-      required: true
-  - type: textarea
-    id: context
-    attributes:
-      label: Additional context
-      description: Anything else that might be relevant
+      label: "Expected Behavior"
     validations:
       required: false
   - type: textarea
-    id: envinfo
+    id: actual
     attributes:
-      label: Environment
-      description: |
-        Please paste the output of running `npx envinfo --preset playwright`.
-        This will be automatically formatted as a code block, so no need for backticks.
-      placeholder: |
-        System:
-          OS: Linux 6.2 Ubuntu 22.04.3 LTS 22.04.3 LTS (Jammy Jellyfish)
-          CPU: (8) arm64
-        Binaries:
-          Node: 18.19.0 - ~/.nvm/versions/node/v18.19.0/bin/node
-          npm: 10.2.3 - ~/.nvm/versions/node/v18.19.0/bin/npm
-        npmPackages:
-          @playwright/test: 1.41.1 => 1.41.1
-      render: shell
+      label: "Actual Behavior"
+    validations:
+      required: false
+  - type: input
+    id: environment
+    attributes:
+      label: "Environment"
+      placeholder: "OS, browser, version, etc."

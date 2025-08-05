@@ -13,7 +13,7 @@ wnd[0]/usr/txtS_BUKRS-LOW
 ```
 
 :::note
-Here sid does not refer to System ID. sid refers to the string that comes in lsdata attribute in WebGUI HTML DOM. 
+Here sid does not refer to System ID. sid refers to the string that comes inside lsdata attribute in WebGUI HTML DOM. 
 :::
 
 ## Signature
