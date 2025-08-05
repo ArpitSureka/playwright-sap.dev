@@ -25,5 +25,5 @@ export default defineConfig({
 ```
 
 :::info Compatibility
-Currently works only with **Fiori Launchpad** and **NetWeaver** login pages. Under the hood this uses SAPLogin. [Click here to report a bug with SAPLogin](https://github.com/ArpitSureka/Playwright-SAP/issues/new?template=sapLoginBug.yml)
+Currently works only with **Fiori Launchpad** and **NetWeaver** login pages. Under the hood this uses SAPLogin. [Click here to report a bug with SAPLogin](https://github.com/ArpitSureka/playwright-sap/issues/new?template=sapLoginBug.yml)
 :::

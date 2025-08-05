@@ -16,8 +16,8 @@ No, currently other SAP webapplications like Ariba, Concur, etc are not supporte
 
 <!-- ### ❓ I found a bug where can I report it ?
 Playwright-SAP is a relatively new project and there might be some bugs. Thanks for reporting it.
-[Click here to report a bug.](https://github.com/ArpitSureka/Playwright-SAP/issues/new?template=bug.yml)
+[Click here to report a bug.](https://github.com/ArpitSureka/playwright-sap/issues/new?template=bug.yml)
 
-[Click here to request a feature.](https://github.com/ArpitSureka/Playwright-SAP/issues/new?template=feature.yml)
+[Click here to request a feature.](https://github.com/ArpitSureka/playwright-sap/issues/new?template=feature.yml)
 
-[Click here for documentation impovement.](https://github.com/ArpitSureka/Playwright-SAP/issues/new?template=documentation.yml) -->
+[Click here for documentation impovement.](https://github.com/ArpitSureka/playwright-sap/issues/new?template=documentation.yml) -->

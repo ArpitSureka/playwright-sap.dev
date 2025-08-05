@@ -21,7 +21,7 @@ page.SAPLogin(username: string,
 | `url` | string | ✖ | If provided, the browser first navigates to the URL; otherwise it assumes that the login page is already open. |
 
 :::info Compatibility
-Currently works only with **Fiori Launchpad** and **NetWeaver** login pages.[Click here to report a bug with SAPLogin](https://github.com/ArpitSureka/Playwright-SAP/issues/new?template=sapLoginBug.yml)
+Currently works only with **Fiori Launchpad** and **NetWeaver** login pages.[Click here to report a bug with SAPLogin](https://github.com/ArpitSureka/playwright-sap/issues/new?template=sapLoginBug.yml)
 :::
 
 ## Example

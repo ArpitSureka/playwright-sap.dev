@@ -12,7 +12,7 @@ const config: Config = {
     v4: true,
   },
   url: 'https://github.com',
-  baseUrl: '/Playwright-SAP/',
+  baseUrl: '/playwright-sap/',
   organizationName: 'ArpitSureka',
   projectName: 'Playwright-SAP',
   deploymentBranch: 'gh-pages',
