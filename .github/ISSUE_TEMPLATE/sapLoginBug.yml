@@ -1,0 +1,23 @@
+name: Bug Report 🪲
+description: SAP Login bug report
+title: '[SAPLogin Bug]: '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        SAPLogin is a new project so there may be some issues. sorry about that!. Thank you for helping us improve it!
+  - type: input
+    id: url
+    attributes:
+      label: Login Page URL or the type of Login page
+      placeholder: ex. hostname.com/sap/bc/ui2/flp or Fiori or Netweaver
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      placeholder: |
+        What happened ?
+    validations:
+      required: true

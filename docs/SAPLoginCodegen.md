@@ -26,3 +26,7 @@ You can also add this command in package.json file under scripts section to make
 ```
 
 then run `npm run codegen` to directly run the codegen script written above.
+
+:::info Compatibility
+Currently works only with **Fiori Launchpad** and **NetWeaver** login pages. Under the hood this uses SAPLogin. [Click here to report a bug with SAPLogin](https://github.com/ArpitSureka/Playwright-SAP/issues/new?template=sapLoginBug.yml)
+:::
