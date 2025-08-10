@@ -1,5 +1,6 @@
 ---
 sidebar_position: 5
+description: Learn how to use the SAPLogin utility in Playwright-SAP to simplify authentication and automate the login process for SAP Fiori Launchpad and SAP NetWeaver applications.
 ---
 
 # SAP Login
@@ -28,14 +29,14 @@ Currently works with **Fiori Launchpad** and **SAP WebGUI** login pages. Other S
 
 ## Examples
 
-### Basic Login
+#### Basic Login
 
 ```ts
 // Login with URL navigation
 await page.SAPLogin(SAP_USER, SAP_PASS, 'https://sap.example.com');
 ```
 
-### Login to an Already Open Page
+#### Login to an Already Open Page
 
 ```ts
 // Navigate to the login page first
@@ -45,7 +46,7 @@ await page.goto('https://sap.example.com');
 await page.SAPLogin(SAP_USER, SAP_PASS);
 ```
 
-### Login with Environment Variables
+#### Login with Environment Variables
 
 ```ts
 // Using environment variables for credentials (recommended for security)

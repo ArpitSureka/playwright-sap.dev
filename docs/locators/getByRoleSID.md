@@ -105,4 +105,4 @@ The table below shows how SID suffixes map to role names in the `getByRoleSID` l
 ## See Also
 
 - [locateSID](./locateSID.md) - For more complex SID-based locators
-- [GetByRoleUI5](./GetByRoleUI5.md) - For UI5-specific role locators
+- [getByRoleUI5](./getByRoleUI5.md) - For UI5-specific role locators

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: Learn how to use the locateSID locator in Playwright-SAP to reliably target and automate SAP GUI elements using their stable SID identifiers.
 ---
 
 # locateSID
@@ -33,7 +34,7 @@ page.locateSID(sid: string): Locator
 
 ## Common Examples
 
-### Basic Actions
+#### Basic Actions
 
 ```ts title="Click the Execute button"
 await page.locateSID('wnd[0]/tbar[1]/btn[8]').click();
@@ -47,7 +48,7 @@ await page.locateSID('wnd[0]/usr/txtS_BUKRS-LOW').fill('1000');
 await page.locateSID('wnd[0]/usr/chkSEL_DATE').check();
 ```
 
-### Working with Multiple Windows
+#### Working with Multiple Windows
 
 ```ts title="Interact with element in second window"
 await page.locateSID('wnd[1]/usr/btnSPOP-OPTION1').click(); // Click 'Yes' in a popup
@@ -71,17 +72,7 @@ await page.locateSID('wnd[0]/usr/ctxtDATABROWSE-TABLENAME').fill('but000');
 await page.getByRoleSID('textField', { name: 'DATABROWSE-TABLENAME' }).fill('but000');
 ```
 
-## When to Use locateSID vs. Other Locators
-
-| Scenario | Recommended Locator |
-|----------|--------------------|
-| Standard SAP GUI elements in `usr` path | `getByRoleSID` for better readability |
-| Complex elements (tables, trees, nested controls) | `locateSID` for direct access |
-| Elements outside the `usr` path | `locateSID` (only option) |
-| UI5/Fiori elements | Consider `GetByRoleUI5` when applicable |
-| Need maximum stability across SAP versions | `locateSID` |
-
 ## See Also
 
 - [getByRoleSID](./getByRoleSID.md) – Human-friendly wrapper over SIDs
-- [GetByRoleUI5](./GetByRoleUI5.md) – For UI5-specific elements
+- [getByRoleUI5](./getByRoleUI5.md) – For UI5-specific elements

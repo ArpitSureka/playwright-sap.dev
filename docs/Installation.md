@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: Step-by-step guide to installing and setting up Playwright-SAP in your project using npm, yarn, or pnpm. Get started with automated testing for SAP applications.
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -69,6 +70,8 @@ Your `package.json` will contain an entry like this:
 ```
 
 The `npm:@playwright-sap/test@^1.0.2` syntax tells npm to use the `@playwright-sap/test` package whenever code imports from `@playwright/test`.
+
+[Read more about package aliasing](https://medium.com/@mahesh.jsdev/demystifying-npm-package-name-aliasing-a-comprehensive-guide-5a0a59519de9)
 
 ### Getting Help
 

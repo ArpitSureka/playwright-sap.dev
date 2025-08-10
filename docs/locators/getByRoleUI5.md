@@ -86,7 +86,7 @@ await page.getByRoleUI5('IconTabFilter').nth(1).click();
 
 ## Comparison with Standard Playwright
 
-### Standard Playwright (Brittle)
+#### Standard Playwright (Brittle)
 
 ```ts
 // Using standard Playwright locators - likely to break when UI changes
@@ -95,7 +95,7 @@ await page.locator('.sapMITBContent > .sapMITBTab:nth-child(2)').click();
 await page.locator('[id$="-documentationTab"]').click();
 ```
 
-### Playwright-SAP (Robust)
+#### Playwright-SAP (Robust)
 
 ```ts
 // Using getByRoleUI5 - stable across UI changes
@@ -107,8 +107,7 @@ await page.getByRoleUI5('IconTabFilter', { text: 'Documentation' }).click();
 1. **Prefer properties over indexes**: Using `.nth()` should be a last resort as the order of elements might change
 2. **Use meaningful properties**: Text, label, and title are usually more stable than technical IDs
 3. **Start with less specific matching**: Begin with `exact: false` (default) and only use `exact: true` when necessary
-4. **Chain locators for complex UIs**: Use the parent-child relationship to narrow down your search
-5. **Use UI5 Inspector**: Always verify the control type and available properties with UI5 Inspector
+4. **Use UI5 Inspector**: Always verify the control type and available properties with UI5 Inspector
 
 ## See Also
 
