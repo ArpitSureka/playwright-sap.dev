@@ -6,17 +6,19 @@ Mapping of Playwright-SAP Version and Playwright Version
 
 | Playwright-SAP Version | Playwright Version |
 | -------- | -------- |
-| v1.0.0 |  v1.53.0 |
+| v1.1.0 |  v1.53.0 |
 
 <br></br>
 <br></br>
 
-## Upcoming Features
+## Upcoming Features/Fixes
 
-- [ ] Make a script like `npm init playwright-sap@latest` for easy installation and setup.
-- [ ] No text locators during text assertions. UI5 issue.
-- [ ] Multiple properties key/value pair for getByRoleUI5 locator.
+- [ ] One error is coming even when the test is passed. Error: `1 error was not a part of any test, see above for details`
+- [ ] Check if it is possible to install UI5 inspector in chrome during codegen and testRunner.
+- [ ] Automatic No text locators during text assertions.UI5 issue
 - [ ] UI5Xpath Locator. Construct xpaths using ui5 dom and use them as attribute.
+- [ ] Multiple properties key/value pair for getByRoleUI5 locator.
+- [ ] When hovering over the html element which is just above sid html element sid is not coming. Fix
 - [ ] Improving getByRoleSID for sid like `wnd[0]/tbar/btn[2]`
 - [ ] WebGUI Table locators - SAP has a lot of tables and sid based code for table is very difficult to understand for tables.
 - [ ] Improved caching of locators.

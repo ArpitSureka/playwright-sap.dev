@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Playwright SAP',
+  title: '🎭 Playwright SAP',
   tagline: 'Custom Playwright for SAP Web Applications Testing',
   // favicon: 'img/favicon.ico',
   future: {
@@ -48,7 +48,7 @@ const config: Config = {
     // Replace with your project's social card
     // image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Playwright SAP',
+      title: '🎭 Playwright SAP',
       items: [
         {
           href: 'https://www.npmjs.com/package/playwright-sap',

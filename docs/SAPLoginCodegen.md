@@ -7,10 +7,10 @@ sidebar_position: 6
 To use automatic login with codegen use this command when starting codegen,
 
 ```bash
-npx playwright codegen "<url>" --sap-login <username> <password>
+npx playwright codegen "<url>" --sap-login "<username>" "<password>"
 
 // Example
-npx playwright codegen "https://sap.example.com" --sap-login user1 pass1
+npx playwright codegen "https://sap.example.com" --sap-login "user1" "pass1"
 ```
 
 You can also add this command in package.json file under scripts section to make it easier to use.
@@ -19,7 +19,7 @@ You can also add this command in package.json file under scripts section to make
 {
     // Other configs
     "scripts": {
-        "codegen": "playwright codegen '<url>' --sap-login <username> <password>"
+        "codegen": "playwright codegen '<url>' --sap-login '<username>' '<password>'"
     }
     // Other configs
 }
@@ -28,5 +28,5 @@ You can also add this command in package.json file under scripts section to make
 then run `npm run codegen` to directly run the codegen script written above.
 
 :::info Compatibility
-Currently works only with **Fiori Launchpad** and **NetWeaver** login pages. Under the hood this uses SAPLogin. [Click here to report a bug with SAPLogin](https://github.com/ArpitSureka/playwright-sap/issues/new?template=sapLoginBug.yml)
+Currently works only with **Fiori Launchpad** and **Webgui** login pages. Under the hood this uses SAPLogin. [Click here to report a bug with SAPLogin](https://github.com/ArpitSureka/playwright-sap/issues/new?template=sapLoginBug.yml)
 :::
