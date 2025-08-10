@@ -1,31 +1,75 @@
+---
+sidebar_position: 9
+---
 
+# Versioning
 
-# Versions
+## Version Compatibility
 
-Mapping of Playwright-SAP Version and Playwright Version
+This table shows the compatibility between Playwright-SAP and Playwright versions. 
 
 | Playwright-SAP Version | Playwright Version |
 | -------- | -------- |
-| v1.1.0 |  v1.53.0 |
+| v1.1.0 | v1.53.0 |
 
-<br></br>
-<br></br>
+<!-- ## Release Notes
 
-## Upcoming Features/Fixes
+### v1.1.0
 
-- [ ] One error is coming even when the test is passed. Error: `1 error was not a part of any test, see above for details`
-- [ ] Check if it is possible to install UI5 inspector in chrome during codegen and testRunner.
-- [ ] Automatic No text locators during text assertions.UI5 issue
-- [ ] UI5Xpath Locator. Construct xpaths using ui5 dom and use them as attribute.
-- [ ] Multiple properties key/value pair for getByRoleUI5 locator.
-- [ ] When hovering over the html element which is just above sid html element sid is not coming. Fix
-- [ ] Improving getByRoleSID for sid like `wnd[0]/tbar/btn[2]`
-- [ ] WebGUI Table locators - SAP has a lot of tables and sid based code for table is very difficult to understand for tables.
-- [ ] Improved caching of locators.
-- [ ] Improve UI5 processing.
-- [ ] Make locator for type in lsdata attribute.
+**New Features:**
+- Added `getByRoleSID` locator for improved readability
+- Added `SAPLogin` utility for Fiori and WebGUI authentication
+- Added `--sap-login` flag for codegen
+- Improved stability for WebGUI element detection
 
+**Bug Fixes:**
+- Fixed issue with table cell selection in complex tables
+- Resolved timing issues with dialog popups
+- Improved error handling for failed login attempts -->
 
-If you have an idea or feature that you would like to see. Please raise the issue at - 
-<!-- Improve UI5 processing by not relying on global sap.ui module that comes from sap -->
-<!-- lsdata has a type information use that for locators -->
+## Feature Roadmap
+
+The following features and improvements are planned for upcoming releases. This roadmap is subject to change based on community feedback and development priorities.
+
+#### Bug Fixes
+
+- [ ] Fix error message appearing even when tests pass: `1 error was not a part of any test, see above for details`
+- [ ] Fix issue where SID doesn't appear when hovering over elements directly above SID elements
+
+#### UI5 Improvements
+
+- [ ] Enable UI5 inspector installation in Chrome during codegen and testRunner
+- [ ] Implement automatic handling of text locators during UI5 text assertions
+- [ ] Create UI5Xpath locator to construct XPaths using UI5 DOM
+- [ ] Support multiple properties (key/value pairs) for getByRoleUI5 locator
+- [ ] Improve UI5 processing to reduce dependency on global sap.ui module
+
+#### SAP WebGUI Enhancements
+
+- [ ] Extend getByRoleSID to support paths like `wnd[0]/tbar/btn[2]`
+- [ ] Develop specialized WebGUI table locators for easier table interaction
+- [ ] Create locators based on the type information in lsdata attribute
+
+#### Performance Optimizations
+
+- [ ] Implement improved caching of locators
+- [ ] Optimize selector resolution for complex SAP structures
+
+<!-- ## Version Policy
+
+Playwright-SAP follows semantic versioning (SemVer):
+
+- **Major version** (x.0.0): Includes breaking changes
+- **Minor version** (1.x.0): Adds new features in a backward-compatible manner
+- **Patch version** (1.0.x): Includes backward-compatible bug fixes -->
+
+## Contribution
+
+If you have an idea or feature that you would like to see implemented, please raise an issue at:
+
+[GitHub Issues](https://github.com/ArpitSureka/playwright-sap/issues/new/choose)
+
+Select the appropriate issue template:
+- Bug report
+- Feature request
+- Documentation improvement
