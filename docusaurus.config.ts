@@ -62,6 +62,13 @@ const config: Config = {
     {
       tagName: 'meta',
       attributes: {
+        name: 'google-site-verification',
+        content: 'google-site-verification=v94W_j9SOXFzMXoAQ9UgB67Szs48OP77uyrerSIA0Lw',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
         property: 'og:type',
         content: 'website',
       },
