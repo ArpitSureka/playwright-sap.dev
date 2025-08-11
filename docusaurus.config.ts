@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
@@ -11,7 +11,7 @@ const config: Config = {
   future: {
     v4: true,
   },
-    url: 'https://ArpitSureka.github.io',
+  url: 'https://ArpitSureka.github.io',
   baseUrl: '/playwright-sap/',
   organizationName: 'ArpitSureka',
   projectName: 'playwright-sap',
@@ -78,6 +78,12 @@ const config: Config = {
     description: 'Specialized Playwright extension for reliable SAP application testing',
     keywords: ['playwright', 'sap', 'automation', 'testing', 'ui5', 'fiori', 'webgui', 'e2e testing', 'end-to-end testing', 'test automation', 'SAP Automation', 'SAP Testing', 'SAP UI5 Testing', 'SAP Fiori Testing', 'SAP WebGUI Testing', 'Worsoft', 'E2E Testing', 'UIPath', 'Automation Anywhere'],
   },
+  scripts: [
+  {
+    src: 'https://scripts.simpleanalyticscdn.com/latest.js',
+    async: true,
+  },
+],
   themeConfig: {
     colorMode: {
       defaultMode: 'dark',
@@ -88,8 +94,8 @@ const config: Config = {
     // image: 'img/playwright-sap-social-card.jpg',
     metadata: [
       // {name: 'twitter:card', content: 'summary_large_image'},
-      {name: 'og:title', content: 'Playwright SAP - Automated Testing for SAP Applications'},
-      {name: 'og:description', content: 'Specialized Playwright extension for reliable SAP application testing including Fiori, WebGUI, and UI5 applications'},
+      { name: 'og:title', content: 'Playwright SAP - Automated Testing for SAP Applications' },
+      { name: 'og:description', content: 'Specialized Playwright extension for reliable SAP application testing including Fiori, WebGUI, and UI5 applications' },
     ],
     navbar: {
       title: '🎭 Playwright SAP',
