@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://playwright-sap.dev/sitemap.xml

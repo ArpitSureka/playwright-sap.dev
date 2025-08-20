@@ -11,8 +11,8 @@ const config: Config = {
   future: {
     v4: true,
   },
-  url: 'https://ArpitSureka.github.io',
-  baseUrl: '/playwright-sap/',
+  url: 'https://playwright-sap.dev',
+  baseUrl: '/',
   organizationName: 'ArpitSureka',
   projectName: 'playwright-sap',
   deploymentBranch: 'gh-pages',
@@ -59,13 +59,13 @@ const config: Config = {
         content: 'playwright, sap, automation, testing, ui5, fiori, webgui, e2e testing, end-to-end testing, test automation, SAP Automation, SAP Testing, SAP UI5 Testing, SAP Fiori Testing, SAP WebGUI Testing, Worsoft,E2E Testing, UIPath, Automation Anywhere',
       },
     },
-    {
-      tagName: 'meta',
-      attributes: {
-        name: 'google-site-verification',
-        content: 'hzFrjzK5jfWCRofwHAlvmSfSMOmQ0PYClu2wW4bqqfQ',
-      },
-    },
+    // {
+    //   tagName: 'meta',
+    //   attributes: {
+    //     name: 'google-site-verification',
+    //     content: 'hzFrjzK5jfWCRofwHAlvmSfSMOmQ0PYClu2wW4bqqfQ',
+    //   },
+    // },
     {
       tagName: 'meta',
       attributes: {
@@ -73,6 +73,26 @@ const config: Config = {
         content: 'website',
       },
     },
+    {
+      tagName: 'script',
+      attributes: {
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-PQW7XM5D0Q',
+        type: 'text/javascript',
+        async: 'true',
+      }
+    },
+     {
+      tagName: 'script',
+      attributes: {
+        type: 'text/javascript',
+      },
+      innerHTML: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-PQW7XM5D0Q');
+      `
+    }
   ],
   customFields: {
     description: 'Specialized Playwright extension for reliable SAP application testing',
@@ -82,7 +102,17 @@ const config: Config = {
   {
     src: 'https://scripts.simpleanalyticscdn.com/latest.js',
     async: true,
+    'data-hostname': 'playwright-sap.dev'
   },
+  // {
+  //   src: 'https://plausible.io/js/script.js',
+  //    defer: true, 
+  //   'data-domain': 'playwright-sap.dev/'
+  // },
+  {
+      src: 'https://www.googletagmanager.com/gtag/js?id=G-PQW7XM5D0Q',
+      async: true,
+    },
 ],
   themeConfig: {
     colorMode: {
