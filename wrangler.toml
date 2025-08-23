@@ -1,0 +1,14 @@
+name = "playwright-sap-docs"
+pages_build_output_dir = "build"   # or "dist" depending on your project
+
+[build]
+command = "npm install && npm run build"   # change to `npm ci && npm run build` if you want strict installs
+
+[vars]
+NODE_VERSION = "24.1.0"
+
+[env.production.vars]
+NODE_ENV = "production"
+
+[env.preview.vars]
+NODE_ENV = "development"
