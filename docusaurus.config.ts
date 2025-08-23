@@ -39,7 +39,6 @@ const config: Config = {
         sitemap: {
           changefreq: 'weekly',
           priority: 0.5,
-          ignorePatterns: ['/tags/**'],
           filename: 'sitemap.xml',
         },
       } satisfies Preset.Options,
@@ -92,6 +91,9 @@ const config: Config = {
     description: 'Specialized Playwright extension for reliable SAP application testing',
     keywords: ['playwright', 'sap', 'automation', 'testing', 'ui5', 'fiori', 'webgui', 'e2e testing', 'end-to-end testing', 'test automation', 'SAP Automation', 'SAP Testing', 'SAP UI5 Testing', 'SAP Fiori Testing', 'SAP WebGUI Testing', 'Worsoft', 'E2E Testing', 'UIPath', 'Automation Anywhere'],
   },
+  plugins: [
+    'docusaurus-plugin-llms',
+  ],
   scripts: [
     {
       src: 'https://scripts.simpleanalyticscdn.com/latest.js',
