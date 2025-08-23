@@ -8,7 +8,9 @@ command = "npm install && npm run build"   # change to `npm ci && npm run build`
 NODE_VERSION = "24.1.0"
 
 [env.production.vars]
+NODE_VERSION = "24.1.0"
 NODE_ENV = "production"
 
 [env.preview.vars]
+NODE_VERSION = "24.1.0"
 NODE_ENV = "development"
