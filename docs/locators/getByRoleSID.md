@@ -6,7 +6,7 @@ sidebar_position: 3
 
 The `getByRoleSID` locator provides a more human-readable and maintainable alternative to the `locateSID` locator. While SID locators are powerful and stable for SAP GUI automation, they can be difficult to read and understand at a glance. The `getByRoleSID` locator solves this problem by translating role-based syntax into the corresponding SID format internally.
 
-**Important**: This locator can only be used when the SID is of the format `wnd[<x>]/usr/` which covers most common SAP GUI elements.
+**Important**: This locator can only be used when the SID is of the format `wnd[<x>]/<sub>/<role>` which covers most common SAP GUI elements.
 
 ## Signature
 
@@ -15,6 +15,7 @@ page.getByRoleSID(role: string,
                   options?: {
                      name?: string;  // The name identifier of the element
                      pos?:  number;  // Position index when multiple elements share the same role/name
+                     sub?:  string;  // Refers to sub-section of the screen. Default sub = 'usr'
                      wnd?:  number;  // Window index, defaults to 0 (main window)
                   }): Locator
 ```
@@ -61,7 +62,14 @@ sid = wnd[0]/usr/ctxtVBAK-VBELN
 locator = getByRoleSID('textField', { name: 'VBAK-VBELN' })
 ```
 
-#### Example 5: Table Interaction
+#### Example 4: Button in Menu bar.
+```tsx
+sid = wnd[0]/mbar/btn[0]
+
+locator = getByRoleSID('button', { pos: 0, sub: 'mbar' })
+```
+
+#### Example 6: Table Interaction
 ```tsx for a table cell
 sid = wnd[0]/usr/tblSAPMV45ATCTRL_V45A/txtVBAP-ARKTX[0,0]
 

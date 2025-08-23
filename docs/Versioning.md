@@ -10,14 +10,19 @@ description: Find the latest version compatibility information between Playwrigh
 The following features and improvements are planned for upcoming releases. This roadmap is subject to change based on community feedback and development priorities.
 
 #### Bug Fixes
+None
+<!-- Check if text is working in partial matching of checkAndMakeSelectorTokens and createPropertyValueMatcher -->
+<!-- Xpath Locators are not proper. -->
 
 #### UI5 Improvements
 
-- [ ] Implement automatic handling of text locators during UI5 text assertions
 - [ ] Create UI5Xpath locator to construct XPaths using UI5 DOM
 - [ ] Support multiple properties (key/value pairs) for getByRoleUI5 locator
 - [ ] Improve UI5 processing to reduce dependency on global sap.ui module
-- [ ] Check if it is posssible to bring ui5 inspector automaticcaly when opening dev tools. 
+- [ ] Check if it is posssible to bring ui5 inspector automatically when opening dev tools. 
+- [ ] Change priority order of codegen when generating UI5 locators - Increase UI5 Xpath Priority.
+- [ ] Add regex support in getByRoleUI5 propertyValue part.
+<!-- Give UI5 XPath higher priority that getByRole locator but less than getByText. Also Check if it should be done or not as well. Do only when there is UI5 XPath at a lower priority than getByRole-->
 
 #### SAP WebGUI Enhancements
 
@@ -25,6 +30,7 @@ The following features and improvements are planned for upcoming releases. This 
 - [ ] Create locators based on the type information in lsdata attribute
 
 #### Performance Optimizations
+<!-- Can be done via using full Xpath -->
 - [ ] Improve UI5 Caching.
 
 
@@ -35,7 +41,7 @@ This table shows the compatibility between Playwright-SAP and Playwright version
 
 | Playwright-SAP Version | Playwright Version |
 | -------- | -------- |
-| v1.1.0 | v1.53.0 |
+| v1.1 | v1.53.0 |
 
 <!-- ## Version Policy
 
@@ -52,12 +58,13 @@ Playwright-SAP follows semantic versioning (SemVer):
 ##### **New Features:**
 - Added UI5 Inspector Extension in Chrome during codegen and testRunner.
 - Added basic caching of UI5 Tree. Can be imporved further.
+- Added automatic handling of text locators during UI5 text assertions.
 - Extended getByRoleSID to support paths like `wnd[0]/tbar/btn[2]`
 
 ##### **Bug Fixes:**
 - Fixed error message appearing even when tests pass: `1 error was not a part of any test, see above for details`
 - Fix issue where SID doesn't appear when hovering over elements directly above SID elements
-- Exact match in SID part. 
+- Fixed exact match in SID part. previous it was matching in some edge cases of partial match.
 
 
 ### v1.1.0

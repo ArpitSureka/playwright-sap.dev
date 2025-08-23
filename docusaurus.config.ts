@@ -30,6 +30,13 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           routeBasePath: '/',
+          versions: {
+            current: {
+              label: 'Latest',
+              path: '',   // still accessible
+              badge: false, // hides the "Latest" badge on docs pages
+            },
+          },
         },
         blog: false,
         theme: {
@@ -81,7 +88,7 @@ const config: Config = {
         async: 'true',
       }
     },
-     {
+    {
       tagName: 'script',
       attributes: {
         type: 'text/javascript',
@@ -99,21 +106,21 @@ const config: Config = {
     keywords: ['playwright', 'sap', 'automation', 'testing', 'ui5', 'fiori', 'webgui', 'e2e testing', 'end-to-end testing', 'test automation', 'SAP Automation', 'SAP Testing', 'SAP UI5 Testing', 'SAP Fiori Testing', 'SAP WebGUI Testing', 'Worsoft', 'E2E Testing', 'UIPath', 'Automation Anywhere'],
   },
   scripts: [
-  {
-    src: 'https://scripts.simpleanalyticscdn.com/latest.js',
-    async: true,
-    'data-hostname': 'playwright-sap.dev'
-  },
-  // {
-  //   src: 'https://plausible.io/js/script.js',
-  //    defer: true, 
-  //   'data-domain': 'playwright-sap.dev/'
-  // },
-  {
+    {
+      src: 'https://scripts.simpleanalyticscdn.com/latest.js',
+      async: true,
+      'data-hostname': 'playwright-sap.dev'
+    },
+    // {
+    //   src: 'https://plausible.io/js/script.js',
+    //    defer: true, 
+    //   'data-domain': 'playwright-sap.dev/'
+    // },
+    {
       src: 'https://www.googletagmanager.com/gtag/js?id=G-PQW7XM5D0Q',
       async: true,
     },
-],
+  ],
   themeConfig: {
     colorMode: {
       defaultMode: 'dark',
@@ -130,6 +137,11 @@ const config: Config = {
     navbar: {
       title: '🎭 Playwright SAP',
       items: [
+        {
+          type: 'docsVersionDropdown',
+          position: 'right',
+          dropdownActiveClassDisabled: true,
+        },
         {
           href: 'https://www.npmjs.com/package/playwright-sap',
           label: 'NPM',
