@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 description: Learn how to use the SAPLogin utility in Playwright-SAP to simplify authentication and automate the login process for SAP Fiori Launchpad and SAP NetWeaver applications.
 ---
 

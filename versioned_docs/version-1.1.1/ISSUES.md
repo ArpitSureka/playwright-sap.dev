@@ -1,3 +1,6 @@
+---
+sidebar_position: 9
+---
 # Issues
 
 This is the first version of Playwright-SAP so they are bound to be some bugs and edgecases which were overlooked during devlopement. Sorry for Incovinence. [Please raise your issue by clicking here](https://github.com/ArpitSureka/playwright-sap/issues/new?template=bug.yml). Will fix as soon as possible. Thanks for using Playwright-SAP

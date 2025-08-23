@@ -7,7 +7,6 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: '🎭 Playwright SAP - Automated Testing for SAP Applications',
   tagline: 'Specialized Playwright module for Reliable SAP Web Applications Testing',
-  // favicon: 'img/favicon.ico',
   future: {
     v4: true,
   },
@@ -66,13 +65,6 @@ const config: Config = {
         content: 'playwright, sap, automation, testing, ui5, fiori, webgui, e2e testing, end-to-end testing, test automation, SAP Automation, SAP Testing, SAP UI5 Testing, SAP Fiori Testing, SAP WebGUI Testing, Worsoft,E2E Testing, UIPath, Automation Anywhere',
       },
     },
-    // {
-    //   tagName: 'meta',
-    //   attributes: {
-    //     name: 'google-site-verification',
-    //     content: 'hzFrjzK5jfWCRofwHAlvmSfSMOmQ0PYClu2wW4bqqfQ',
-    //   },
-    // },
     {
       tagName: 'meta',
       attributes: {
@@ -111,11 +103,6 @@ const config: Config = {
       async: true,
       'data-hostname': 'playwright-sap.dev'
     },
-    // {
-    //   src: 'https://plausible.io/js/script.js',
-    //    defer: true, 
-    //   'data-domain': 'playwright-sap.dev/'
-    // },
     {
       src: 'https://www.googletagmanager.com/gtag/js?id=G-PQW7XM5D0Q',
       async: true,
@@ -127,10 +114,7 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
-    // Project's social card for better sharing on social media
-    // image: 'img/playwright-sap-social-card.jpg',
     metadata: [
-      // {name: 'twitter:card', content: 'summary_large_image'},
       { name: 'og:title', content: 'Playwright SAP - Automated Testing for SAP Applications' },
       { name: 'og:description', content: 'Specialized Playwright extension for reliable SAP application testing including Fiori, WebGUI, and UI5 applications' },
     ],

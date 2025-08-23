@@ -1,5 +1,5 @@
 ---
-sidebar_position: 9
+sidebar_position: 8
 description: Find the latest version compatibility information between Playwright-SAP and Playwright. Ensure your test automation setup is up-to-date.
 ---
 
