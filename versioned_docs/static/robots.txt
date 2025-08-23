@@ -1,4 +1,23 @@
 User-agent: *
 Allow: /
 
+# Explicitly allow known LLM crawlers to ensure visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
 Sitemap: https://playwright-sap.dev/sitemap.xml
