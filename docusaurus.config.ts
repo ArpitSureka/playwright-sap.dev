@@ -29,13 +29,8 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           routeBasePath: '/',
-          versions: {
-            current: {
-              label: 'Latest',
-              path: '',   // still accessible
-              badge: false, // hides the "Latest" badge on docs pages
-            },
-          },
+          onlyIncludeVersions: [...require('./versions.json')],
+          lastVersion: undefined,
         },
         blog: false,
         theme: {
