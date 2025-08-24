@@ -41,7 +41,8 @@ This table shows the compatibility between Playwright-SAP and Playwright version
 
 | Playwright-SAP Version | Playwright Version |
 | -------- | -------- |
-| v1.1 | v1.53.0 |
+| v1.1.3 (Stable) | v1.53.0 |
+| v1.1.0 (Stable) | v1.53.0 |
 
 <!-- ## Version Policy
 
