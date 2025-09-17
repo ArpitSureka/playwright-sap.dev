@@ -12,17 +12,16 @@ The following features and improvements are planned for upcoming releases. This 
 #### Bug Fixes
 None
 <!-- Check if text is working in partial matching of checkAndMakeSelectorTokens and createPropertyValueMatcher -->
-<!-- Xpath Locators are not proper. -->
 
 #### UI5 Improvements
 
-- [ ] Create UI5Xpath locator to construct XPaths using UI5 DOM
-- [ ] Support multiple properties (key/value pairs) for getByRoleUI5 locator
-- [ ] Improve UI5 processing to reduce dependency on global sap.ui module
-- [ ] Check if it is posssible to bring ui5 inspector automatically when opening dev tools. 
 - [ ] Change priority order of codegen when generating UI5 locators - Increase UI5 Xpath Priority.
 - [ ] Add regex support in getByRoleUI5 propertyValue part.
+- [ ] Add a new function .properties() for UI5 locators like .textContent() function this would give properties as a json object.
 <!-- Give UI5 XPath higher priority that getByRole locator but less than getByText. Also Check if it should be done or not as well. Do only when there is UI5 XPath at a lower priority than getByRole-->
+<!-- - [ ] Improve UI5 processing to reduce dependency on global sap.ui module -->
+<!-- - [ ] Check if it is posssible to bring ui5 inspector automatically when opening dev tools. -->
+<!-- Failed ask SAP Team to make ui5 inspector as a sidebar. create a pr in github in their repo they might agree -->
 
 #### SAP WebGUI Enhancements
 
@@ -30,9 +29,6 @@ None
 - [ ] Create locators based on the type information in lsdata attribute
 
 #### Performance Optimizations
-<!-- Can be done via using full Xpath -->
-- [ ] Improve UI5 Caching.
-
 
 
 ## Version Compatibility
@@ -41,6 +37,7 @@ This table shows the compatibility between Playwright-SAP and Playwright version
 
 | Playwright-SAP Version | Playwright Version |
 | -------- | -------- |
+| v1.1.4 (Stable) | v1.53.0 |
 | v1.1.3 (Stable) | v1.53.0 |
 | v1.1.0 (Stable) | v1.53.0 |
 
@@ -54,7 +51,15 @@ Playwright-SAP follows semantic versioning (SemVer):
 
 ## Release Notes
 
-### v1.1.1
+### v1.1.4
+
+##### **New Features:**
+- Improved UI5 Dom Caching and added UI5 locator caching.
+- Added UI5Xpath locator to construct XPaths using UI5 DOM
+- Added Support for multiple properties (key/value pairs) for getByRoleUI5 locator
+- Pinned UI5 Extension
+
+### v1.1.3
 
 ##### **New Features:**
 - Added UI5 Inspector Extension in Chrome during codegen and testRunner.
