@@ -1,20 +1,16 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # getByRoleUI5
-
-`getByRoleUI5` is a powerful locator that finds UI5 elements based on their control type and properties. Unlike standard Playwright locators that rely on the DOM structure, `getByRoleUI5` communicates directly with the UI5 framework to find elements reliably.
+`getByRoleUI5` finds UI5 controls by control type (role) plus optional control property filters. It talks to the UI5 runtime (not raw DOM) making it far more stable than defauly playwright locators.
 
 ## Signature
-
 ```ts
 page.getByRoleUI5(
-  role: string,       // UI5 control type (e.g., 'Button', 'Table')
-  properties?: object, // Control properties to match (e.g., { text: 'Save' })
-  options?: {
-    exact?: boolean   // Whether to use exact or partial matching
-  }
+  role: string, // UI5 control type (e.g., 'Button', 'Table')
+  properties?: Record<string, string>,  // Control properties to match (e.g., { text: 'Save' })
+  options?: { exact?: boolean }
 ): Locator
 ```
 
@@ -23,20 +19,18 @@ page.getByRoleUI5(
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
 | `role` | string | ✅ | The UI5 control type as exposed by the framework (case-insensitive)<br/>Examples: `Button`, `Input`, `Table`, `Dialog`, `IconTabFilter` |
-| `properties` | object | ❌ | A map of control properties to match<br/>Example: `{ text: 'Save' }`, `{ icon: 'sap-icon://search' }`<br/>*Note: Currently supports matching on a single property; multiple property support coming soon* |
+| `properties` | object | ❌ | A map of control properties to match<br/>Example: `{ text: 'Save' }`, `{ icon: 'sap-icon://search' }`|
 | `options.exact` | boolean | ❌ | When `true`, property matching is case-sensitive and requires exact matches<br/>When `false` (default), matching is case-insensitive and allows partial matches |
 
-## Basic Examples
-
-```ts title="Click a button by its text"
+## Quick Examples
+```ts
+// Click a button by its text
 await page.getByRoleUI5('Button', { text: 'Save' }).click();
-```
 
-```ts title="Fill an input field by its label"
+// Fill an input by its label property
 await page.getByRoleUI5('Input', { label: 'First Name' }).fill('John');
-```
 
-```ts title="Select a specific item from a dropdown"
+// Select a list item inside a ComboBox popup
 await page.getByRoleUI5('ComboBox', { name: 'Country' }).click();
 await page.getByRoleUI5('Item', { text: 'Germany' }).click();
 ```
@@ -77,12 +71,10 @@ await page.getByRoleUI5('IconTabFilter').nth(1).click();
 
 ## Why Use getByRoleUI5?
 
-| Standard Playwright | Playwright-SAP with getByRoleUI5 |
-|--------------------|----------------------------------|
-| ❌ Relies on DOM structure that changes frequently in UI5 apps | ✅ Uses stable UI5 control types and properties |
-| ❌ Breaks when UI5 generates new IDs | ✅ Works regardless of generated IDs |
-| ❌ Requires complex CSS/XPath selectors | ✅ Uses simple, readable control types and properties |
-| ❌ Difficult to maintain as app evolves | ✅ Remains stable across app updates |
+- Stable: Ignores volatile generated DOM IDs
+- Readable: Intent expressed via control type & business-facing properties
+- Precise: Filters on multiple properties
+- Composable: Chain with Playwright (`.nth()`, `.first()`, assertions, etc.)
 
 ## Comparison with Standard Playwright
 
@@ -103,13 +95,12 @@ await page.getByRoleUI5('IconTabFilter', { text: 'Documentation' }).click();
 ```
 
 ## Best Practices
-
-1. **Prefer properties over indexes**: Using `.nth()` should be a last resort as the order of elements might change
-2. **Use meaningful properties**: Text, label, and title are usually more stable than technical IDs
-3. **Start with less specific matching**: Begin with `exact: false` (default) and only use `exact: true` when necessary
-4. **Use UI5 Inspector**: Always verify the control type and available properties with UI5 Inspector
+- Prefer semantic properties (`text`, `label`, `title`, `icon`, `name`) over index-based `.nth()`.
+- Add one property at a time while debugging; over‑constraining can yield zero results.
+- Use `exact: true` only when partial matches cause ambiguity.
+- Inspect with the UI5 Inspector extension to discover real property names.
 
 ## See Also
-
-- [getByRoleSID](./getByRoleSID.md) - For WebGUI applications using Screen IDs
-- [locateSID](./locateSID.md) - For direct access to SAP Screen IDs
+- [`locateUI5`](./locateUI5.md) – Short hierarchical control paths.
+- [`getByRoleSID`](./getByRoleSID.md) – Role-based lookup for SAP WebGUI SIDs.
+- [`locateSID`](./locateSID.md) – Lowest-level SID access.

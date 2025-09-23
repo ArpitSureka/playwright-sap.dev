@@ -1,11 +1,8 @@
 ---
-sidebar_position: 2
-description: Learn how to use the locateSID locator in Playwright-SAP to reliably target and automate SAP GUI elements using their stable SID identifiers.
+sidebar_position: 3
 ---
 
 # locateSID
-
-## Overview
 
 The `locateSID` locator allows you to target SAP GUI elements using their SID identifiers. These locators are extremely stable and reliable for SAP GUI automation, as they are based on the application's internal structure rather than the HTML DOM, which may change between versions.
 
@@ -41,17 +38,17 @@ await page.locateSID('wnd[0]/tbar[1]/btn[8]').click();
 ```
 
 ```ts title="Fill company code field"
-await page.locateSID('wnd[0]/usr/txtS_BUKRS-LOW').fill('1000');
+await page.locateSID('wnd[0]/usr/txtLOW').fill('1000');
 ```
 
 ```ts title="Check a checkbox"
-await page.locateSID('wnd[0]/usr/chkSEL_DATE').check();
+await page.locateSID('wnd[0]/usr/chkDATE').check();
 ```
 
 #### Working with Multiple Windows
 
 ```ts title="Interact with element in second window"
-await page.locateSID('wnd[1]/usr/btnSPOP-OPTION1').click(); // Click 'Yes' in a popup
+await page.locateSID('wnd[1]/usr/btnOPTION').click(); // Click 'Yes' in a popup
 ```
 
 ## How This Works

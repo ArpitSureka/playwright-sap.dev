@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # getByRoleSID
@@ -57,9 +57,9 @@ locator = getByRoleSID('text', { name: 'CONTACT', pos: 0, wnd: 1 })
 
 #### Example 4: Form Field Input
 ```tsx
-sid = wnd[0]/usr/ctxtVBAK-VBELN
+sid = wnd[0]/usr/ctxtYEAR
 
-locator = getByRoleSID('textField', { name: 'VBAK-VBELN' })
+locator = getByRoleSID('textField', { name: 'YEAR' })
 ```
 
 #### Example 4: Button in Menu bar.
@@ -71,10 +71,10 @@ locator = getByRoleSID('button', { pos: 0, sub: 'mbar' })
 
 #### Example 6: Table Interaction
 ```tsx for a table cell
-sid = wnd[0]/usr/tblSAPMV45ATCTRL_V45A/txtVBAP-ARKTX[0,0]
+sid = wnd[0]/usr/tblSAPMVA/txtVBAP[0]/ele[0]
 
 // Note: Complex table structures may still require locateSID
-locator = page.locateSID('wnd[0]/usr/tblSAPMV45ATCTRL_V45A/txtVBAP-ARKTX[0,0]')
+locator = page.locateSID('wnd[0]/usr/tblSAPMVA/txtVBAP[0]/ele[0]')
 ```
 
 ## SID Role Mapping

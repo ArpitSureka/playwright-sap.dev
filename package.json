@@ -5,6 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
+    "dev:current": "DOCS_DEV=1 docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "clear": "docusaurus clear",

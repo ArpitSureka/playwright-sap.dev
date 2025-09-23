@@ -2,11 +2,27 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+// Dynamic docs version handling so we can opt-in to viewing / editing the unversioned ("current") docs in dev.
+// Run with DOCS_DEV=1 (via the new npm script) to include the live /docs content as the root version.
+// In normal runs we only serve the published versioned docs for a production-like view.
+// This lets you edit files in `docs/` and see hot-reload changes immediately without creating a new version.
+//
+// Usage:
+//   npm run dev:current  -> includes 'current' (unversioned) docs at root
+//   npm start            -> production style, only versioned docs
+//
+// If you already launched without DOCS_DEV and switch, you may want to `npm run clear` once to reset cache.
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const versions: string[] = require('./versions.json');
+const includeCurrent = process.env.DOCS_DEV === '1' || process.env.DOCS_DEV === 'true';
+const onlyIncludeVersions = includeCurrent ? ['current', ...versions] : versions;
+
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
   title: '🎭 Playwright SAP - Automated Testing for SAP Applications',
-  tagline: 'Specialized Playwright module for Reliable SAP Web Applications Testing',
+  tagline: 'SAP Testing & Automation',
   future: {
     v4: true,
   },
@@ -14,6 +30,7 @@ const config: Config = {
   baseUrl: '/',
   organizationName: 'ArpitSureka',
   projectName: 'playwright-sap',
+  favicon: "img/playwright-logo.ico",
   deploymentBranch: 'gh-pages',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -29,8 +46,10 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           routeBasePath: '/',
-          onlyIncludeVersions: [...require('./versions.json')],
-          lastVersion: undefined,
+          // When DOCS_DEV is enabled we inject the live current docs first so changes are hot-reloaded.
+          onlyIncludeVersions,
+          // When showing current, make it the last (latest) version so it appears as default.
+          lastVersion: includeCurrent ? 'current' : undefined,
         },
         blog: false,
         theme: {
