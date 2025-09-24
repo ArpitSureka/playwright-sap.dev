@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 2
 description: Learn how to use the --sap-login flag with Playwright's codegen to automatically handle SAP login and streamline your test script creation for Fiori Launchpad and SAP WebGUI.
 ---
 

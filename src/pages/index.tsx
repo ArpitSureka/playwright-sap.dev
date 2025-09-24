@@ -179,33 +179,6 @@ const FeatureRow: React.FC<FeatureRowProps> = ({ title, description, videoUrl, i
   );
 }
 
-const logos = [
-  { imageUrl: "img/logos/VSCode.png", href: "https://code.visualstudio.com", alt: "VS Code" },
-  { imageUrl: "img/logos/Bing.png", href: "https://bing.com", alt: "Bing" },
-  { imageUrl: "img/logos/Outlook.png", href: "https://outlook.com", alt: "Outlook" },
-  { imageUrl: "img/logos/DHotstar.jpg", href: "https://www.hotstar.com/", alt: "Disney+ Hotstar" },
-  {
-    imageUrl: "img/logos/MUI.png",
-    href: "https://github.com/mui-org/material-ui",
-    alt: "Material UI",
-  },
-  { imageUrl: "img/logos/ING.png", href: "https://github.com/ing-bank/lion", alt: "ING" },
-  {
-    imageUrl: "img/logos/Adobe2.png",
-    href: "https://github.com/adobe/spectrum-web-components",
-    alt: "Adobe",
-  },
-  {
-    imageUrl: "img/logos/ReactNavigation.png",
-    href: "https://github.com/react-navigation/react-navigation",
-    alt: "React Navigation",
-  },
-  {
-    imageUrl: "img/logos/accessibilityinsights.png",
-    href: "https://accessibilityinsights.io/",
-    alt: "Accessibility Insights",
-  },
-];
 
 const Home: React.FC = () => {
   const context = useDocusaurusContext();
@@ -236,7 +209,27 @@ const Home: React.FC = () => {
         <br></br>
         <br></br>
         <div style={{textAlign: 'center'}}>
-          <img src="img/logos/Browsers.png" width="40%" alt="Browsers (Chromium, Firefox, WebKit)" />
+          <img style={{verticalAlign: 'middle'}} src="https://www.sap.com/dam/application/shared/logos/sap-logo-svg.svg" height="120" alt="Browsers (Chromium, Firefox, WebKit)" />
+          <img style={{verticalAlign: 'middle'}} src="img/B_OpenUI5_V.svg" height="150" alt="Browsers (Chromium, Firefox, WebKit)" />
+          {/* WEBGUI pseudo-logo */}
+          <div
+            style={{
+              display: 'inline-block',
+              verticalAlign: 'middle',
+              marginLeft: 40,
+              padding: '12px 20px',
+              background: 'linear-gradient(135deg,#53B8DE,#054a91)',
+              borderRadius: 8,
+              color: '#fff',
+              fontFamily: 'Segoe UI, Roboto, Helvetica, Arial, sans-serif',
+              textAlign: 'center',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
+            }}
+            aria-label="SAP GUI for HTML (WEBGUI)"
+          >
+            <div style={{fontSize: 42, fontWeight: 700, letterSpacing: 1}}>WEBGUI</div>
+            <div style={{fontSize: 14, fontWeight: 400, letterSpacing: 1.5, textTransform: 'uppercase', opacity: 0.9}}>sap gui for HTML</div>
+          </div>
         </div>
         <section className={styles.features}>
           <div className="container">
