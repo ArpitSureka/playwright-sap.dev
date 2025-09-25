@@ -3,12 +3,11 @@ sidebar_position: 9
 ---
 # Issues
 
-This is the first version of Playwright-SAP so they are bound to be some bugs and edgecases which were overlooked during devlopement. Sorry for Incovinence. [Please raise your issue by clicking here](https://github.com/ArpitSureka/playwright-sap/issues/new?template=bug.yml). Will fix as soon as possible. Thanks for using Playwright-SAP
 
-If you have any Feature/Suggestion. please raise the issue here would love to discuss and work on that.
+Playwright-SAP is in its first release — there may be a few bugs or overlooked edge cases. Thanks for your patience! 🙏
 
-[Click here to report a bug.](https://github.com/ArpitSureka/playwright-sap/issues/new?template=bug.yml)
+**Found a bug?** [Click here to report it.](https://github.com/ArpitSureka/playwright-sap/issues/new?template=bug.yml) We’ll fix it as quickly as possible.
 
-[Click here to request a feature.](https://github.com/ArpitSureka/playwright-sap/issues/new?template=feature.yml)
+**Have a feature idea or suggestion?** [Raise a feature request here](https://github.com/ArpitSureka/playwright-sap/issues/new?template=feature.yml) . We’d love to discuss and collaborate.
 
-[Click here for impovement to documentation](https://github.com/ArpitSureka/playwright-sap/issues/new?template=documentation.yml)
+**Want to improve docs?** [Suggest documentation changes here.](https://github.com/ArpitSureka/playwright-sap/issues/new?template=documentation.yml)

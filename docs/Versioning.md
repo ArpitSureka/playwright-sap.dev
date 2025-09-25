@@ -9,15 +9,16 @@ description: Find the latest version compatibility information between Playwrigh
 
 The following features and improvements are planned for upcoming releases. This roadmap is subject to change based on community feedback and development priorities.
 
-#### Bug Fixes
-None
+<!-- #### Bug Fixes -->
+<!-- None -->
 <!-- Check if text is working in partial matching of checkAndMakeSelectorTokens and createPropertyValueMatcher -->
 
 #### UI5 Improvements
 
-- [ ] Change priority order of codegen when generating UI5 locators - Increase UI5 Xpath Priority.
 - [ ] Add regex support in getByRoleUI5 propertyValue part.
 - [ ] Add a new function .properties() for UI5 locators like .textContent() function this would give properties as a json object.
+<!-- - [ ] Change priority order of codegen when generating UI5 locators - Increase UI5 Xpath Priority. -->
+<!-- UI5 Xpath is looking very unstable -->
 <!-- Give UI5 XPath higher priority that getByRole locator but less than getByText. Also Check if it should be done or not as well. Do only when there is UI5 XPath at a lower priority than getByRole-->
 <!-- - [ ] Improve UI5 processing to reduce dependency on global sap.ui module -->
 <!-- - [ ] Check if it is posssible to bring ui5 inspector automatically when opening dev tools. -->
@@ -28,7 +29,6 @@ None
 - [ ] Develop specialized WebGUI table locators for easier table interaction
 - [ ] Create locators based on the type information in lsdata attribute
 
-#### Performance Optimizations
 
 
 ## Version Compatibility
@@ -75,6 +75,7 @@ Playwright-SAP follows semantic versioning (SemVer):
 
 ### v1.1.0
 - Fixed a few issues with 1.0.0 version.
+
 
 
 

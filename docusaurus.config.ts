@@ -135,8 +135,18 @@ const config: Config = {
       { name: 'og:description', content: 'Specialized Playwright extension for reliable SAP application testing including Fiori, WebGUI, and UI5 applications' },
     ],
     navbar: {
-      title: '🎭 Playwright SAP',
+      title: 'Playwright SAP',
+      logo: {
+        alt: "Playwright logo",
+        src: "img/playwright-logo.svg",
+      },
       items: [
+        {
+          type: "doc",
+          docId: "intro",
+          label: "Docs",
+          position: "left",
+        },
         {
           type: 'docsVersionDropdown',
           position: 'right',
@@ -154,6 +164,10 @@ const config: Config = {
         },
       ],
     },
+    // footer: {
+    //   style: "dark",
+    //   copyright: `Copyright © ${new Date().getFullYear()} Microsoft`,
+    // },
     sidebar: {
       autoCollapseCategories: false,
       hideable: true,

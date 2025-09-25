@@ -6,7 +6,12 @@ sidebar_position: 1
 
 **Playwright-SAP** is a specialized node module built on top of Microsoft Playwright that provides **reliable automation for SAP applications** including Fiori Launchpad, SAP WebGUI, and UI5-based applications.
 
-## Why Playwright-SAP?
+
+**Playwright-SAP** extends Playwright with SAP‑aware locators and helpers so you can create **stable, maintainable tests** for Fiori Launchpad, UI5 and SAP WebGUI.
+
+No need to pay for Tricentis, Worksoft, or other costly SAP test tools — Playwright-SAP is completly free.
+
+## Why it exists
 
 Standard Playwright works well for most web applications, but SAP applications present unique challenges:
 
@@ -16,45 +21,45 @@ Standard Playwright works well for most web applications, but SAP applications p
 
 These challenges make writing and maintaining end-to-end tests for SAP applications slow, frustrating, and prone to failure.
 
-## Key Features
 
-Playwright-SAP addresses these challenges with three core innovations:
+## What it provides
+* SAP‑native locators like `getByRoleUI5`, `locateSID`, `getByRoleSID`
+* Smarter recording: generates SAP‑aware selectors instead of brittle DOM chains
+* Built‑in wait logic aligned with UI5/WebGUI rendering cycles
+* Login & environment helpers: `sapConfig`, `SAPLogin`, `sapLoginCodegen`
+* Open source, lightweight, Playwright API remains unchanged
 
-| Feature | Description |
-|---------|-------------|
-| **Specialized Locators** | UI5 and SID-aware locators that understand SAP's UI structure. Stable tests that don't break on every deployment |
-| **Smart Code Generation** | Enhanced recorder that captures the right selectors the first time. Faster test creation with fewer manual fixes |
-| **Convenience Functions** | Ready-made solutions for common tasks like `SAPLogin` and `sapConfig`. Less boilerplate code resulting in faster development |
+## Supported targets
+* Fiori Launchpad tiles and embedded apps
+* UI5 / OpenUI5 applications
+* SAP WebGUI (HTML GUI)
 
-## Supported SAP Applications
+## Quick start
+1. Install: see [Installation](./installation.md)
+2. Add config: set endpoints/credentials in [`sapConfig`](./sapLogin/sapConfig.md)
+3. Write a first step with [`getByRoleUI5`](./locators/getByRoleUI5.md)
+4. Automate login via [`SAPLogin`](./sapLogin/sapLogin.md) or generate via [`sapLoginCodegen`](./sapLogin/sapLoginCodegen.md)
+5. Use SID helpers where classic WebGUI screens appear: [`locateSID`](./locators/locateSID.md)
 
-Playwright-SAP works seamlessly with:
+## Short example
+```ts
+import { test, expect } from '@playwright/test';
 
-- **SAP Fiori Launchpad** - Modern SAP interface for accessing applications
-- **SAP WebGUI** - Browser-based SAP GUI for traditional SAP applications
-- **UI5 Applications** - Any application built with the SAPUI5/OpenUI5 framework
+test('Open a Launchpad app', async ({ page }) => {
+    await page.goto(process.env.SAP_BASE_URL);
+    await page.SAPLogin(process.env.SAP_USER, process.env.SAP_PASS);
+    await expect(page.getByRoleUI5('Tile', { name: 'Sales Orders' })).toBeVisible();
+    await page.getByRoleUI5('Tile', { name: 'Sales Orders' }).click();
+});
+```
 
-## How It Works
-
-Playwright-SAP integrates directly with Playwright's architecture:
-
-1. **UI5 Locators** (`getByRoleUI5`) - Communicate directly with the UI5 runtime to find elements based on their UI5 properties
-2. **SID Locators** (`locateSID`, `getByRoleSID`) - Translate friendly queries into SAP Screen IDs for reliable element selection
-3. **Enhanced Code Generator** - Records specialized SAP-aware locators instead of brittle DOM selectors
-
-## Getting Started
-
-Ready to start automating your SAP applications? Follow these steps:
-
-1. [Install Playwright-SAP](./Installation.md) in your project
-2. Learn about the [specialized locators](./locators/getByRoleUI5.md) for SAP applications
-3. Set up [automatic login](./SAPConfig.md) for your tests
-
----------------------------------------------------------------------------------------------------------------
-Playwright, built by Microsoft, is an outstanding open-source project.
-
+## Locator guidance
+* Use `getByRoleUI5` for UI5 controls
+* Use `locateSID` / `getByRoleSID` for WebGUI screen elements
+* Fall back to standard Playwright locators only for plain surrounding HTML
+---
+Playwright is an open-source project from Microsoft.
 Heartfelt thanks to all the developers and teams at Microsoft who made Playwright what it is today.👏
 
----------------------------------------------------------------------------------------------------------------
 Note that this project is no where associated with SAP, Playwright or Microsoft Corportaion.
 

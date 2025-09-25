@@ -6,111 +6,73 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./styles.module.css";
 
+// Any SAP UI • Any Platform • One API
+// Native support for SAP UI5, WebGUI, and Fiori apps without extra setup.
+// Works everywhere: Windows, Linux, macOS, in the cloud or on CI/CD.
+// Familiar Playwright API across TypeScript, JavaScript, Python, .NET, Java.
+// 100% open source, no vendor lock-in, no hidden license costs.
+
+// SAP-Native Locators • Smarter Codegen
+// Purpose-built locators for UI5 controls and WebGUI elements — no brittle XPath.
+// Enhanced Codegen that generates SAP-aware selectors automatically.
+// Ships with a UI5 extension and helpers for auto login and session handling.
+// Supports code styles similar to WDI5 and even SAP GUI scripting, so teams can reuse skills.
+
+// Reliable • Flake-Free • CI-Ready
+// Understands SAP rendering cycles — auto-wait means fewer flaky tests.
+// Save and reuse authentication state. Log in once, test many flows.
+// Browser contexts deliver full isolation and fast, parallel execution.
+// Designed for modern CI/CD pipelines — run thousands of SAP tests at scale.
+
+// Powerful • Cost-Saving Tooling
+// Inspector: debug SAP pages, locators, and step through execution.
+// Trace Viewer: screenshots, DOM snapshots, action explorer for failures.
+// All the tooling you expect from Playwright, tuned for SAP.
+// No need to pay for Tricentis, Worksoft, or other costly SAP test tools — Playwright-SAP is free.
+
+
 const features = [
   {
-    title: "Any browser \u2022 Any platform \u2022 One API",
-    description: <>
-      <p>
-        <b>Cross-browser.</b> Playwright supports all modern rendering engines including Chromium, WebKit, and Firefox.
-      </p>
-      <p>
-        <b>Cross-platform.</b> Test on Windows, Linux, and macOS, locally or on CI, headless or headed.
-      </p>
-      <p>
-        <b>Cross-language.</b> Use the Playwright API in <a
-        href="https://playwright.dev/docs/intro">TypeScript</a>, <a
-        href="https://playwright.dev/docs/intro">JavaScript</a>, <a
-        href="https://playwright.dev/python/docs/intro">Python</a>, <a
-        href="https://playwright.dev/dotnet/docs/intro">.NET</a>, <a
-        href="https://playwright.dev/java/docs/intro">Java</a>.
-      </p>
-      <p>
-        <b>Test Mobile Web.</b> Native mobile emulation of Google Chrome for Android and Mobile Safari. The same rendering engine works on your Desktop and in the Cloud.
-      </p>
-    </>,
-  },
-  {
-  },
-  {
-  },
-  {
-    title: "Resilient \u2022 No flaky tests",
+    title: "Any SAP UI • Any Platform • One API",
     description: (
       <>
-        <p>
-          <b>Auto-wait.</b> Playwright waits for elements to be actionable prior to performing
-          actions. It also has a rich set of introspection events. The combination of the two
-          eliminates the need for artificial timeouts - the primary cause of flaky tests.
-        </p>
-        <p>
-          <b>Web-first assertions.</b> Playwright assertions are created specifically for the
-          dynamic web. Checks are automatically retried until the necessary conditions are met.
-        </p>
-        <p>
-          <b>Tracing.</b> Configure test retry strategy, capture execution trace, videos, screenshots
-          to eliminate flakes.
-        </p>
+        <p>Native support for SAP UI5, WebGUI, and Fiori apps without extra setup.</p>
+        <p>Works everywhere: Windows, Linux, macOS, in the cloud or on CI/CD.</p>
+        <p>Familiar Playwright API across TypeScript, JavaScript, Python, .NET, Java.</p>
+        <p>100% open source, no vendor lock-in, no hidden license costs.</p>
       </>
     ),
   },
   {
-    title: "No trade-offs \u2022 No limits",
+    title: "SAP-Native Locators • Smarter Codegen",
     description: (
       <>
-        <p>
-          Browsers run web content belonging to different origins in different processes.
-          Playwright is aligned with the modern browsers architecture and runs tests out-of-process.
-          This makes Playwright free of the typical in-process test runner limitations.
-        </p>
-        <p>
-          <b>Multiple everything.</b> Test scenarios that span multiple <b>tabs</b>, multiple <b>origins</b> and multiple <b>users</b>.
-          Create scenarios with different contexts for different users and run them against your server, all in one test.
-        </p>
-        <p>
-          <b>Trusted events.</b> Hover elements, interact with dynamic controls, produce trusted events.
-          Playwright uses real browser input pipeline indistinguishable from the real user.
-        </p>
-        <p>
-          <b>Test frames, pierce Shadow DOM.</b> Playwright selectors pierce shadow DOM and
-          allow entering frames seamlessly.
-        </p>
+        <p>Purpose-built locators for UI5 controls and WebGUI elements — no brittle XPath.</p>
+        <p>Enhanced Codegen that generates SAP-aware selectors automatically.</p>
+        <p>Ships with a UI5 extension and helpers for auto login and session handling.</p>
+        <p>Supports code styles similar to WDI5 and even SAP GUI scripting, so teams can reuse skills.</p>
       </>
     ),
   },
   {
-  },
-  {
-  },
-  {
-    title: "Full isolation \u2022 Fast execution",
+    title: "Reliable • Flake-Free • CI-Ready",
     description: (
       <>
-        <p>
-          <b>Browser contexts.</b> Playwright creates a browser context for each test. Browser
-          context is equivalent to a brand new browser profile. This delivers full test isolation
-          with zero overhead. Creating a new browser context only takes a handful of milliseconds.
-        </p>
-        <p>
-          <b>Log in once.</b> Save the authentication state of the context and reuse it in all the tests.
-          This bypasses repetitive log-in operations in each test, yet delivers full isolation of independent tests.
-        </p>
+        <p>Understands SAP rendering cycles — auto-wait means fewer flaky tests.</p>
+        <p>Save and reuse authentication state. Log in once, test many flows.</p>
+        <p>Browser contexts deliver full isolation and fast, parallel execution.</p>
+        <p>Designed for modern CI/CD pipelines — run thousands of SAP tests at scale.</p>
       </>
     ),
   },
   {
-    title: "Powerful Tooling",
+    title: "Powerful • Cost-Saving Tooling",
     description: (
       <>
-        <p>
-          <b><a href="docs/codegen">Codegen.</a></b> Generate tests by recording your actions. Save them into any language.
-        </p>
-        <p>
-          <b><a href="docs/debug#playwright-inspector">Playwright inspector.</a></b> Inspect page, generate selectors, step through the test execution, see click points, explore execution logs.
-        </p>
-        <p>
-          <b><a href="docs/trace-viewer-intro">Trace Viewer.</a></b> Capture all the information to investigate the test failure. Playwright trace
-          contains test execution screencast, live DOM snapshots, action explorer, test source, and many more.
-        </p>
+        <p>Inspector: debug SAP pages, locators, and step through execution.</p>
+        <p>Trace Viewer: screenshots, DOM snapshots, action explorer for failures.</p>
+        <p>All the tooling you expect from Playwright, tuned for SAP.</p>
+        <p>No need to pay for Tricentis, Worksoft, or other costly SAP test tools — Playwright-SAP is free.</p>
       </>
     ),
   },
@@ -136,49 +98,6 @@ const Feature: React.FC<FeatureProps> = ({ imageUrl, title, description }) => {
     </div>
   );
 }
-
-type FeatureRowProps = {
-  title: string
-  description: string
-  videoUrl: string
-  isImageLeft: boolean
-}
-
-const FeatureRow: React.FC<FeatureRowProps> = ({ title, description, videoUrl, isImageLeft }) => {
-  const textColumn = (
-    <div className={"col col--5"}>
-      <h2>{title}</h2>
-      <p>{description}</p>
-    </div>
-  );
-  const imageColumn = (
-    <div className={"col col--7"}>
-      <video muted controls loop>
-        <source src={videoUrl} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  );
-  return (
-    <section
-      className={clsx(!isImageLeft ? styles.featureContainerAlt : undefined)}
-    >
-      <div className={"container"}>
-        <div
-          className={clsx(
-            "row",
-            styles.featureRow,
-            !isImageLeft ? styles.featureRowAlt : undefined
-          )}
-        >
-          {imageColumn}
-          {textColumn}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 
 const Home: React.FC = () => {
   const context = useDocusaurusContext();
@@ -208,9 +127,9 @@ const Home: React.FC = () => {
       <main>
         <br></br>
         <br></br>
-        <div style={{textAlign: 'center'}}>
-          <img style={{verticalAlign: 'middle'}} src="https://www.sap.com/dam/application/shared/logos/sap-logo-svg.svg" height="120" alt="Browsers (Chromium, Firefox, WebKit)" />
-          <img style={{verticalAlign: 'middle'}} src="img/B_OpenUI5_V.svg" height="150" alt="Browsers (Chromium, Firefox, WebKit)" />
+        <div style={{ textAlign: 'center', marginTop: 5, marginBottom: 5 }}>
+          <img style={{ verticalAlign: 'middle', marginRight: 25 }} src="https://www.sap.com/dam/application/shared/logos/sap-logo-svg.svg" height="110" alt="Browsers (Chromium, Firefox, WebKit)" />
+          <img style={{ verticalAlign: 'middle', marginRight: 25 }} src="img/B_OpenUI5_V.svg" height="140" alt="Browsers (Chromium, Firefox, WebKit)" />
           {/* WEBGUI pseudo-logo */}
           <div
             style={{
@@ -227,8 +146,8 @@ const Home: React.FC = () => {
             }}
             aria-label="SAP GUI for HTML (WEBGUI)"
           >
-            <div style={{fontSize: 42, fontWeight: 700, letterSpacing: 1}}>WEBGUI</div>
-            <div style={{fontSize: 14, fontWeight: 400, letterSpacing: 1.5, textTransform: 'uppercase', opacity: 0.9}}>sap gui for HTML</div>
+            <div style={{ fontSize: 42, fontWeight: 700, letterSpacing: 1 }}>WEBGUI</div>
+            <div style={{ fontSize: 14, fontWeight: 400, letterSpacing: 1.5, textTransform: 'uppercase', opacity: 0.9 }}>sap gui for HTML</div>
           </div>
         </div>
         <section className={styles.features}>
