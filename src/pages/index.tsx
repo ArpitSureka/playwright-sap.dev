@@ -127,27 +127,65 @@ const Home: React.FC = () => {
       <main>
         <br></br>
         <br></br>
-        <div style={{ textAlign: 'center', marginTop: 5, marginBottom: 5 }}>
-          <img style={{ verticalAlign: 'middle', marginRight: 25 }} src="https://www.sap.com/dam/application/shared/logos/sap-logo-svg.svg" height="110" alt="Browsers (Chromium, Firefox, WebKit)" />
-          <img style={{ verticalAlign: 'middle', marginRight: 25 }} src="img/B_OpenUI5_V.svg" height="140" alt="Browsers (Chromium, Firefox, WebKit)" />
+        <div style={{ 
+          textAlign: 'center', 
+          marginTop: 5, 
+          marginBottom: 5,
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: '20px',
+          padding: '0 20px'
+        }}>
+          <img 
+            style={{ 
+              height: 'clamp(80px, 15vw, 110px)',
+              maxWidth: '100%',
+              objectFit: 'contain'
+            }} 
+            src="https://www.sap.com/dam/application/shared/logos/sap-logo-svg.svg" 
+            alt="SAP Logo" 
+          />
+          <img 
+            style={{ 
+              height: 'clamp(100px, 18vw, 140px)',
+              maxWidth: '100%',
+              objectFit: 'contain'
+            }} 
+            src="img/B_OpenUI5_V.svg" 
+            alt="OpenUI5 Logo" 
+          />
           {/* WEBGUI pseudo-logo */}
           <div
             style={{
-              display: 'inline-block',
-              verticalAlign: 'middle',
-              marginLeft: 40,
-              padding: '12px 20px',
+              padding: 'clamp(8px, 2vw, 12px) clamp(12px, 3vw, 20px)',
               background: 'linear-gradient(135deg,#53B8DE,#054a91)',
               borderRadius: 8,
               color: '#fff',
               fontFamily: 'Segoe UI, Roboto, Helvetica, Arial, sans-serif',
               textAlign: 'center',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
+              boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+              minWidth: 'fit-content'
             }}
             aria-label="SAP GUI for HTML (WEBGUI)"
           >
-            <div style={{ fontSize: 42, fontWeight: 700, letterSpacing: 1 }}>WEBGUI</div>
-            <div style={{ fontSize: 14, fontWeight: 400, letterSpacing: 1.5, textTransform: 'uppercase', opacity: 0.9 }}>sap gui for HTML</div>
+            <div style={{ 
+              fontSize: 'clamp(24px, 6vw, 42px)', 
+              fontWeight: 700, 
+              letterSpacing: 1 
+            }}>
+              WEBGUI
+            </div>
+            <div style={{ 
+              fontSize: 'clamp(10px, 2.5vw, 14px)', 
+              fontWeight: 400, 
+              letterSpacing: 1.5, 
+              textTransform: 'uppercase', 
+              opacity: 0.9 
+            }}>
+              sap gui for HTML
+            </div>
           </div>
         </div>
         <section className={styles.features}>
