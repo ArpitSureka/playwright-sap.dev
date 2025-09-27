@@ -153,15 +153,21 @@ const config: Config = {
           dropdownActiveClassDisabled: true,
         },
         {
+          href: 'https://playwright.dev/',
+          label: 'Playwright Docs',
+          position: 'right',
+        },
+        {
           href: 'https://www.npmjs.com/package/playwright-sap',
           label: 'NPM',
           position: 'right',
         },
         {
-          href: 'https://github.com/ArpitSureka/playwright-sap',
-          label: 'GitHub',
-          position: 'right',
-        },
+          href: "https://github.com/ArpitSureka/playwright-sap",
+          position: "right",
+          className: "header-github-link",
+          "aria-label": "GitHub repository",
+        }
       ],
     },
     // footer: {

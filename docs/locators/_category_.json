@@ -1,9 +1,5 @@
 {
   "label": "Locators",
   "position": 3,
-  "collapsed": false,
-  "link": {
-    "type": "generated-index",
-    "description": "All the existing playwright locators work these are new locators for SAP websites"
-  }
+  "collapsed": false
 }

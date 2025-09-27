@@ -7,6 +7,7 @@
     "start": "docusaurus start",
     "dev": "DOCS_DEV=1 docusaurus start",
     "build": "docusaurus build",
+    "version": "npm run docusaurus docs:version",
     "swizzle": "docusaurus swizzle",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",

@@ -4,6 +4,8 @@ sidebar_position: 4
 
 # getByRoleSID
 
+This is a WEBGUI Locator.
+
 The `getByRoleSID` locator provides a more human-readable and maintainable alternative to the `locateSID` locator. While SID locators are powerful and stable for SAP GUI automation, they can be difficult to read and understand at a glance. The `getByRoleSID` locator solves this problem by translating role-based syntax into the corresponding SID format internally.
 
 **Important**: This locator can only be used when the SID is of the format `wnd[<x>]/<sub>/<role>` which covers most common SAP GUI elements.

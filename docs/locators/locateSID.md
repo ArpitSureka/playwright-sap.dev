@@ -4,6 +4,8 @@ sidebar_position: 3
 
 # locateSID
 
+This is a WEBGUI Locator.
+
 The `locateSID` locator allows you to target SAP GUI elements using their SID identifiers. These locators are extremely stable and reliable for SAP GUI automation, as they are based on the application's internal structure rather than the HTML DOM, which may change between versions.
 
 SID locators are derived from the `lsdata` attribute in the HTML elements of SAP WebGUI, making them highly resilient to UI changes and updates.
