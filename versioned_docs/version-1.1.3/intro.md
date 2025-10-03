@@ -57,5 +57,5 @@ Playwright, built by Microsoft, is an outstanding open-source project.
 Heartfelt thanks to all the developers and teams at Microsoft who made Playwright what it is today.👏
 
 ---------------------------------------------------------------------------------------------------------------
-Note that this project is no where associated with SAP, Playwright or Microsoft Corportaion.
+Note that this project is no where associated with SAP, Playwright or Microsoft Corporation.
 

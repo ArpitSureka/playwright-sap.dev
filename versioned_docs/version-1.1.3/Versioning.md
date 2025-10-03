@@ -19,7 +19,7 @@ None
 - [ ] Create UI5Xpath locator to construct XPaths using UI5 DOM
 - [ ] Support multiple properties (key/value pairs) for getByRoleUI5 locator
 - [ ] Improve UI5 processing to reduce dependency on global sap.ui module
-- [ ] Check if it is posssible to bring ui5 inspector automatically when opening dev tools. 
+- [ ] Check if it is possible to bring ui5 inspector automatically when opening dev tools. 
 - [ ] Change priority order of codegen when generating UI5 locators - Increase UI5 Xpath Priority.
 - [ ] Add regex support in getByRoleUI5 propertyValue part.
 <!-- Give UI5 XPath higher priority that getByRole locator but less than getByText. Also Check if it should be done or not as well. Do only when there is UI5 XPath at a lower priority than getByRole-->
@@ -58,7 +58,7 @@ Playwright-SAP follows semantic versioning (SemVer):
 
 ##### **New Features:**
 - Added UI5 Inspector Extension in Chrome during codegen and testRunner.
-- Added basic caching of UI5 Tree. Can be imporved further.
+- Added basic caching of UI5 Tree. Can be improved further.
 - Added automatic handling of text locators during UI5 text assertions.
 - Extended getByRoleSID to support paths like `wnd[0]/tbar/btn[2]`
 

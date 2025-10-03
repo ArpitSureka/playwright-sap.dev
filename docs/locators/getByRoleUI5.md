@@ -3,7 +3,7 @@ sidebar_position: 2
 ---
 
 # getByRoleUI5
-`getByRoleUI5` finds UI5 controls by control type (role) plus optional control property filters. It talks to the UI5 runtime (not raw DOM) making it far more stable than defauly playwright locators.
+`getByRoleUI5` finds UI5 controls by control type (role) plus optional control property filters. It talks to the UI5 runtime (not raw DOM) making it far more stable than default playwright locators.
 
 ## Signature
 ```ts

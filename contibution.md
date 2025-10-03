@@ -1,0 +1,1 @@
+Spell check npx cspell "**/*.md" "README.md"

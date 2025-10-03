@@ -21,7 +21,7 @@ The following features and improvements are planned for upcoming releases. This 
 <!-- UI5 Xpath is looking very unstable -->
 <!-- Give UI5 XPath higher priority that getByRole locator but less than getByText. Also Check if it should be done or not as well. Do only when there is UI5 XPath at a lower priority than getByRole-->
 <!-- - [ ] Improve UI5 processing to reduce dependency on global sap.ui module -->
-<!-- - [ ] Check if it is posssible to bring ui5 inspector automatically when opening dev tools. -->
+<!-- - [ ] Check if it is possible to bring ui5 inspector automatically when opening dev tools. -->
 <!-- Failed ask SAP Team to make ui5 inspector as a sidebar. create a pr in github in their repo they might agree -->
 
 #### SAP WebGUI Enhancements
@@ -63,7 +63,7 @@ Playwright-SAP follows semantic versioning (SemVer):
 
 ##### **New Features:**
 - Added UI5 Inspector Extension in Chrome during codegen and testRunner.
-- Added basic caching of UI5 Tree. Can be imporved further.
+- Added basic caching of UI5 Tree. Can be improved further.
 - Added automatic handling of text locators during UI5 text assertions.
 - Extended getByRoleSID to support paths like `wnd[0]/tbar/btn[2]`
 

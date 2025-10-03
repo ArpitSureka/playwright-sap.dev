@@ -51,4 +51,4 @@ Heartfelt thanks to all the developers and teams at Microsoft who made Playwrigh
 
 ----------------------------------------------------------------------------------------------------------------
 
-Note that this project is no where associated with SAP, Playwright or Microsoft Corportaion.
+Note that this project is no where associated with SAP, Playwright or Microsoft Corporation.

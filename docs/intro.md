@@ -9,7 +9,7 @@ sidebar_position: 1
 
 **Playwright-SAP** extends Playwright with SAP‑aware locators and helpers so you can create **stable, maintainable tests** for Fiori Launchpad, UI5 and SAP WebGUI.
 
-No need to pay for Tricentis, Worksoft, or other costly SAP test tools — Playwright-SAP is completly free.
+No need to pay for Tricentis, Worksoft, or other costly SAP test tools — Playwright-SAP is completely free.
 
 ## Why it exists
 
@@ -61,5 +61,4 @@ test('Open a Launchpad app', async ({ page }) => {
 Playwright is an open-source project from Microsoft.
 Heartfelt thanks to all the developers and teams at Microsoft who made Playwright what it is today.👏
 
-Note that this project is no where associated with SAP, Playwright or Microsoft Corportaion.
-
+Note that this project is no where associated with SAP, Playwright or Microsoft Corporation.
