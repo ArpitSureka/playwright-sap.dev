@@ -97,8 +97,8 @@ with alias lines pointing to Playwright-SAP, e.g.:
 ```json title="package.json"
 "dependencies": {
     "@playwright/test": "npm:@playwright-sap/test@^1.1.4",
-    "playwright": "npm:@playwright-sap/test@^1.1.4",
-    "playwright-core": "npm:@playwright-sap/test@^1.1.4"
+    "playwright": "npm:playwright-sap@^1.1.4",
+    "playwright-core": "npm:playwright-sap-core@^1.1.4"
     // other deps...
 }
 ```
