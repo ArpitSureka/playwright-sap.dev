@@ -35,7 +35,7 @@ These challenges make writing and maintaining end-to-end tests for SAP applicati
 * SAP WebGUI (HTML GUI)
 
 ## Quick start
-1. Install: see [Installation](./installation.md)
+1. Install: see [Installation](./Installation.md)
 2. Add config: set endpoints/credentials in [`sapConfig`](./sapAutoLogin/sapConfig.md)
 3. Write a first step with [`getByRoleUI5`](./locators/getByRoleUI5.md)
 4. Automate login via [`SAPLogin`](./sapAutoLogin/sapLogin.md) or generate via [`sapLoginCodegen`](./sapAutoLogin/sapLoginCodegen.md)

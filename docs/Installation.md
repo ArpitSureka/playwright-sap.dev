@@ -131,7 +131,7 @@ npx playwright test
 
 If you encounter issues during installation:
 
-1. Check the [FAQs](./faqs.md) for common problems and solutions
+1. Check the [FAQs](./FAQs.md) for common problems and solutions
 2. [Open an issue](https://github.com/ArpitSureka/playwright-sap/issues/new) on GitHub
 
 ## Next Steps
